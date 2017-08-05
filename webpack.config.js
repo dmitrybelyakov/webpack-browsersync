@@ -1,5 +1,4 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var BrowserSync = require('browser-sync-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -31,12 +30,6 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             filename: './public/css/[name].css'
-        }),
-        new BrowserSync({
-            host: 'localhost',
-            port: 3000,
-            server: { baseDir: ['.'] },
-            open: false
         })
     ]
 };
